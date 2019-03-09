@@ -1,0 +1,74 @@
+BookShopMagazine {
+  background: #e2e1e0;
+  text-align: center;
+  width: 100%;
+}
+
+Book {
+  display: block;
+  background: #ffffff;
+  border-radius: 2px;
+  height: 300px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.12), 0 4px 6px rgba(0,0,0,0.20);
+}
+
+informations {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+}
+
+informations > * {
+  display: list-item;
+}
+
+books {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+Book > * {
+  display: block;
+  font-family: monospace;
+  font-size: 10pt;
+}
+Book > title {
+  font-size: 25pt;
+  font-family: "Century Gothic"
+}
+
+Book > title::first-letter {
+  font-size: 30pt;
+}
+
+Book > type::before {
+  content: "Type: "
+}
+
+Book > price::before {
+  content: "Price: ";
+}
+
+Book > pages::before {
+  content: "Number of pages: ";
+}
+
+Book > releaseDate::before {
+  content: "Release date: ";
+}
+
+Book > author::before {
+  content: "Author: ";
+}
+
+Book > description {
+  padding-top: 50px;
+}

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+
 <BookShopMagazine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <informations>
+    <author>Dominika Szeliga 210333</author>
+    <author>Grzegorz Woźnicki 210353</author>
+    <description>Strona zawiera listę książek do kupienia.</description>
+  </informations>
   <books>
     <Book>
       <title>Jak powstrzymać niedźwiedzia</title>
