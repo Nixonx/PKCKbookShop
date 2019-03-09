@@ -57,7 +57,12 @@ namespace Tests
             bookShop.books.Add(book14);
             bookShop.books.Add(book15);
 
-            XMLutils.Serialize(bookShop, Directory.GetCurrentDirectory()+"\\BookShop.xml");
+            XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop.xml");
+        }
+        private string OutputFilesPath()
+        {
+            string testDir = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            return Directory.GetParent(testDir).FullName;
         }
     }
 }

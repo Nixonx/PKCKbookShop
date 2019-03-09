@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookShopMagazine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <books>
+    <Book>
+      <title>Jak powstrzymać niedźwiedzia</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>2016-08-09T00:00:00</releaseDate>
+      <type>Guide</type>
+      <author>
+        <firstName>Jan</firstName>
+        <lastName>Kowalski</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Sposobów kilka wróbla ćwirka</title>
+      <price>10.5</price>
+      <pages>87</pages>
+      <releaseDate>2017-08-19T00:00:00</releaseDate>
+      <type>Children</type>
+      <author>
+        <firstName>Tomasz</firstName>
+        <lastName>Sienkiewicz</lastName>
+      </author>
+      <description>Zażuć gęślą jaźń - to zdanie zawiera wszystkie polskie znaki</description>
+    </Book>
+    <Book>
+      <title>Słuszna porcja kiełbasy</title>
+      <price>40.5</price>
+      <pages>305</pages>
+      <releaseDate>2012-05-01T00:00:00</releaseDate>
+      <type>Horror</type>
+      <author>
+        <firstName>Olga</firstName>
+        <lastName>Makłowicz</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Smacznie, zdrowo i szczupło</title>
+      <price>45.99</price>
+      <pages>288</pages>
+      <releaseDate>2015-05-01T00:00:00</releaseDate>
+      <type>Fantasy</type>
+      <author>
+        <firstName>Olga</firstName>
+        <lastName>Makłowicz</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>W kręgu bieli</title>
+      <price>45.96</price>
+      <pages>222</pages>
+      <releaseDate>2011-08-09T00:00:00</releaseDate>
+      <type>Novel</type>
+      <author>
+        <firstName>Maria</firstName>
+        <lastName>Wierzchołek</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>W kręgu czerni</title>
+      <price>42.97</price>
+      <pages>223</pages>
+      <releaseDate>2012-09-10T00:00:00</releaseDate>
+      <type>Novel</type>
+      <author>
+        <firstName>Maria</firstName>
+        <lastName>Wierzchołek</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>W kręgu zieleni</title>
+      <price>40.98</price>
+      <pages>224</pages>
+      <releaseDate>2013-10-11T00:00:00</releaseDate>
+      <type>Novel</type>
+      <author>
+        <firstName>Maria</firstName>
+        <lastName>Wierzchołek</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Muzyka skrzypiącej podłogi</title>
+      <price>36.99</price>
+      <pages>104</pages>
+      <releaseDate>2005-08-29T00:00:00</releaseDate>
+      <type>Poetry</type>
+      <author>
+        <firstName>Joe</firstName>
+        <lastName>Smith</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Milczenie kukurydzy</title>
+      <price>50</price>
+      <pages>500</pages>
+      <releaseDate>2013-01-01T00:00:00</releaseDate>
+      <type>Criminal</type>
+      <author>
+        <firstName>Jessica</firstName>
+        <lastName>Corn</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Atomy kryptonitu</title>
+      <price>62.79</price>
+      <pages>432</pages>
+      <releaseDate>2018-12-09T00:00:00</releaseDate>
+      <type>Science</type>
+      <author>
+        <firstName>Charles</firstName>
+        <lastName>Fredrih</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Moje życie z Halinką</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>2016-08-09T00:00:00</releaseDate>
+      <type>History</type>
+      <author>
+        <firstName>Ferdynad</firstName>
+        <lastName>Kiepski</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Jak powstrzymać Paździocha</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>2016-08-09T00:00:00</releaseDate>
+      <type>Guide</type>
+      <author>
+        <firstName>Ferdynad</firstName>
+        <lastName>Kiepski</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Jak zrobić, żaby sie nie chciało kiedy się chce</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>2016-08-09T00:00:00</releaseDate>
+      <type>Guide</type>
+      <author>
+        <firstName>Ferdynad</firstName>
+        <lastName>Kiepski</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Sekrekt fioletowego paznokcia</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>2016-08-09T00:00:00</releaseDate>
+      <type>Criminal</type>
+      <author>
+        <firstName>Olaf</firstName>
+        <lastName>Ridgerd</lastName>
+      </author>
+    </Book>
+    <Book>
+      <title>Ślimakowi się nie śpieszy</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>2016-08-09T00:00:00</releaseDate>
+      <type>Children</type>
+      <author>
+        <firstName>Anna</firstName>
+        <lastName>Kobyłka</lastName>
+      </author>
+    </Book>
+  </books>
+</BookShopMagazine>
