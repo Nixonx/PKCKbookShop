@@ -30,6 +30,8 @@ informations {
 
 informations > * {
   display: list-item;
+  list-style-type: circle;
+  list-style-position: inside;
 }
 
 books {
@@ -46,6 +48,10 @@ Book > * {
   font-size: 10pt;
 }
 
+Book > *::before {
+  font-weight: bold;
+}
+
 Book > title {
   font-size: 25pt;
   font-family: "Century Gothic"
@@ -55,8 +61,19 @@ Book > title::first-letter {
   font-size: 30pt;
 }
 
-Book > type::before {
-  content: "Type: "
+Book[type]::before {
+  content: "Type: " attr(type);
+
+  color: #4a148c;
+  display: block;
+
+  top: 0px;
+  font-family: monospace;
+  font-size: 10pt;
+  width: 100%;
+  text-align: center;
+  background-color: #f3e5f5;
+  padding: 5px 0px 5px 0px;
 }
 
 Book > price::before {
@@ -88,14 +105,18 @@ Book > releaseDate > *:nth-child(2n)::after {
 }
 
 Book[author]::after {
+  font-weight: bold;
+  color: #b71c1c;
   display: block;
   position: absolute;
   content: "Author id: " attr(author);
-  bottom: 5px;
+  bottom: 0px;
   font-family: monospace;
   font-size: 10pt;
   width: 100%;
   text-align: center;
+  background-color: #ffebee;
+  padding: 5px 0px 5px 0px;
 }
 
 Book > description {
