@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookShop
 {
-    enum BookType
+    public enum BookType
     {
         Novel,
         Poetry,
@@ -15,7 +15,7 @@ namespace BookShop
         Criminal,
         Science,
         Guide,
-        Childreen,
+        Children,
         History
     }
 }

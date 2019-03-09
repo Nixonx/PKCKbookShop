@@ -8,8 +8,16 @@ namespace BookShop
 {
     public class Author
     {
-        string firstName { get; set; }
-        string lastName { get; set; }
-        DateTime dateOfBirth { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+
+        #region constructors
+        public Author() { }
+        public Author(string firstName, string lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        #endregion
     }
 }
