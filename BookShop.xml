@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css" ?>
 <!DOCTYPE BookShopMagazine SYSTEM "BookShop.dtd">
 <BookShopMagazine>
   <informations>
@@ -202,4 +203,3 @@
     </Book>
   </books>
 </BookShopMagazine>
-

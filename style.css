@@ -6,12 +6,17 @@ BookShopMagazine {
 
 Book {
   display: block;
+  position: relative;
   background: #ffffff;
   border-radius: 2px;
   height: 300px;
   margin: 10px;
   width: 300px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.12), 0 4px 6px rgba(0,0,0,0.20);
+}
+
+authors {
+  display: none;
 }
 
 informations {
@@ -40,6 +45,7 @@ Book > * {
   font-family: monospace;
   font-size: 10pt;
 }
+
 Book > title {
   font-size: 25pt;
   font-family: "Century Gothic"
@@ -65,8 +71,31 @@ Book > releaseDate::before {
   content: "Release date: ";
 }
 
-Book > author::before {
-  content: "Author: ";
+Book > releaseDate {
+  display: inline-table;
+  float: center;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+Book > releaseDate > *:nth-child(2n)::before {
+  content: "-";
+}
+
+Book > releaseDate > *:nth-child(2n)::after {
+  content: "-";
+}
+
+Book[author]::after {
+  display: block;
+  position: absolute;
+  content: "Author id: " attr(author);
+  bottom: 5px;
+  font-family: monospace;
+  font-size: 10pt;
+  width: 100%;
+  text-align: center;
 }
 
 Book > description {
