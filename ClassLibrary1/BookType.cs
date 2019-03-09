@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Class1
+    enum BookType
     {
+        Novel,
+        Poetry,
+        Horror,
+        Fantasy,
+        Criminal,
+        Science,
+        Guide,
+        Childreen,
+
     }
 }
