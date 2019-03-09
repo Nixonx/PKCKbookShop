@@ -1,0 +1,18 @@
+<!ELEMENT BookShopMagazine (authors, books)>
+<!ELEMENT authors (Author+)>
+<!ELEMENT Author (firstName, lastName)>
+<!ATTLIST Author id ID #REQUIRED>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT books (Book+)>
+<!ELEMENT Book (title, price, pages, releaseDate, description?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT releaseDate (year, month, day)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST Book type ( Novel | Poetry | Horror | Fantasy | Criminal | Science | Guide | Children | History) #REQUIRED>
+<!ATTLIST Book author IDREF #REQUIRED>

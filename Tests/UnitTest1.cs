@@ -24,6 +24,18 @@ namespace Tests
             Author author9 = new Author("Olaf", "Ridgerd");
             Author author10 = new Author("Anna", "Kobyłka");
 
+            bookShop.authors.Add(author1);
+            bookShop.authors.Add(author2);
+            bookShop.authors.Add(author3);
+            bookShop.authors.Add(author4);
+            bookShop.authors.Add(author5);
+            bookShop.authors.Add(author6);
+            bookShop.authors.Add(author7);
+            bookShop.authors.Add(author8);
+            bookShop.authors.Add(author9);
+            bookShop.authors.Add(author10);
+
+
             Book book1 = new Book("Jak powstrzymać niedźwiedzia", 22.99, 222, new DateTime(2016, 8, 9), BookType.Guide, author1);
             Book book2 = new Book("Sposobów kilka wróbla ćwirka", 10.50, 87, new DateTime(2017, 8, 19), BookType.Children, author2);
             book2.description = "Zażuć gęślą jaźń - to zdanie zawiera wszystkie polskie znaki";
@@ -57,7 +69,7 @@ namespace Tests
             bookShop.books.Add(book14);
             bookShop.books.Add(book15);
 
-            XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop.xml");
+         //   XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop1.xml");
         }
         private string OutputFilesPath()
         {

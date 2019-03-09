@@ -1,171 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BookShopMagazine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE BookShopMagazine SYSTEM "BookShop.dtd">
+<BookShopMagazine>
+  <authors>
+    <Author id="A1">
+      <firstName>Jan</firstName>
+      <lastName>Kowalski</lastName>
+    </Author>
+    <Author id="A2">
+      <firstName>Tomasz</firstName>
+      <lastName>Sienkiewicz</lastName>
+    </Author>
+    <Author id="A3">
+      <firstName>Olga</firstName>
+      <lastName>Makłowicz</lastName>
+    </Author>
+    <Author id="A4">
+      <firstName>Maria</firstName>
+      <lastName>Wierzchołek</lastName>
+    </Author>
+    <Author id="A5">
+      <firstName>Joe</firstName>
+      <lastName>Smith</lastName>
+    </Author>
+    <Author id="A6">
+      <firstName>Jessica</firstName>
+      <lastName>Corn</lastName>
+    </Author>
+    <Author id="A7">
+      <firstName>Charles</firstName>
+      <lastName>Fredrih</lastName>
+    </Author>
+    <Author id="A8">
+      <firstName>Ferdynad</firstName>
+      <lastName>Kiepski</lastName>
+    </Author>
+    <Author id="A9">
+      <firstName>Olaf</firstName>
+      <lastName>Ridgerd</lastName>
+    </Author>
+    <Author id="A10">
+      <firstName>Anna</firstName>
+      <lastName>Kobyłka</lastName>
+    </Author>
+  </authors>
   <books>
-    <Book>
+    <Book author="A1" type="Guide">
       <title>Jak powstrzymać niedźwiedzia</title>
       <price>22.99</price>
       <pages>222</pages>
-      <releaseDate>2016-08-09T00:00:00</releaseDate>
-      <type>Guide</type>
-      <author>
-        <firstName>Jan</firstName>
-        <lastName>Kowalski</lastName>
-      </author>
+      <releaseDate>
+        <year>2016</year>
+        <month>08</month>
+        <day>03</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A2" type="Children">
       <title>Sposobów kilka wróbla ćwirka</title>
       <price>10.5</price>
       <pages>87</pages>
-      <releaseDate>2017-08-19T00:00:00</releaseDate>
-      <type>Children</type>
-      <author>
-        <firstName>Tomasz</firstName>
-        <lastName>Sienkiewicz</lastName>
-      </author>
+      <releaseDate>
+        <year>2017</year>
+        <month>08</month>
+        <day>19</day>
+      </releaseDate>
       <description>Zażuć gęślą jaźń - to zdanie zawiera wszystkie polskie znaki</description>
     </Book>
-    <Book>
+    <Book author="A3" type="Horror">
       <title>Słuszna porcja kiełbasy</title>
       <price>40.5</price>
       <pages>305</pages>
-      <releaseDate>2012-05-01T00:00:00</releaseDate>
-      <type>Horror</type>
-      <author>
-        <firstName>Olga</firstName>
-        <lastName>Makłowicz</lastName>
-      </author>
+      <releaseDate>
+        <year>2012</year>
+        <month>05</month>
+        <day>01</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A3" type="Fantasy">
       <title>Smacznie, zdrowo i szczupło</title>
       <price>45.99</price>
       <pages>288</pages>
-      <releaseDate>2015-05-01T00:00:00</releaseDate>
-      <type>Fantasy</type>
-      <author>
-        <firstName>Olga</firstName>
-        <lastName>Makłowicz</lastName>
-      </author>
+      <releaseDate>
+        <year>2015</year>
+        <month>05</month>
+        <day>01</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A4" type="Novel">
       <title>W kręgu bieli</title>
       <price>45.96</price>
       <pages>222</pages>
-      <releaseDate>2011-08-09T00:00:00</releaseDate>
-      <type>Novel</type>
-      <author>
-        <firstName>Maria</firstName>
-        <lastName>Wierzchołek</lastName>
-      </author>
+      <releaseDate>
+        <year>2011</year>
+        <month>08</month>
+        <day>03</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A4" type="Novel">
       <title>W kręgu czerni</title>
       <price>42.97</price>
       <pages>223</pages>
-      <releaseDate>2012-09-10T00:00:00</releaseDate>
-      <type>Novel</type>
-      <author>
-        <firstName>Maria</firstName>
-        <lastName>Wierzchołek</lastName>
-      </author>
+      <releaseDate>
+        <year>2010</year>
+        <month>09</month>
+        <day>10</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A4" type="Novel">
       <title>W kręgu zieleni</title>
       <price>40.98</price>
       <pages>224</pages>
-      <releaseDate>2013-10-11T00:00:00</releaseDate>
-      <type>Novel</type>
-      <author>
-        <firstName>Maria</firstName>
-        <lastName>Wierzchołek</lastName>
-      </author>
+      <releaseDate>
+        <year>2018</year>
+        <month>11</month>
+        <day>20</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A5" type="Poetry">
       <title>Muzyka skrzypiącej podłogi</title>
       <price>36.99</price>
       <pages>104</pages>
-      <releaseDate>2005-08-29T00:00:00</releaseDate>
-      <type>Poetry</type>
-      <author>
-        <firstName>Joe</firstName>
-        <lastName>Smith</lastName>
-      </author>
+      <releaseDate>
+        <year>2005</year>
+        <month>11</month>
+        <day>03</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A6" type="Criminal">
       <title>Milczenie kukurydzy</title>
       <price>50</price>
       <pages>500</pages>
-      <releaseDate>2013-01-01T00:00:00</releaseDate>
-      <type>Criminal</type>
-      <author>
-        <firstName>Jessica</firstName>
-        <lastName>Corn</lastName>
-      </author>
+      <releaseDate>
+        <year>2013</year>
+        <month>03</month>
+        <day>03</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A7" type="Science">
       <title>Atomy kryptonitu</title>
       <price>62.79</price>
       <pages>432</pages>
-      <releaseDate>2018-12-09T00:00:00</releaseDate>
-      <type>Science</type>
-      <author>
-        <firstName>Charles</firstName>
-        <lastName>Fredrih</lastName>
-      </author>
+      <releaseDate>
+        <year>2012</year>
+        <month>12</month>
+        <day>30</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A8" type="History">
       <title>Moje życie z Halinką</title>
       <price>22.99</price>
       <pages>222</pages>
-      <releaseDate>2016-08-09T00:00:00</releaseDate>
-      <type>History</type>
-      <author>
-        <firstName>Ferdynad</firstName>
-        <lastName>Kiepski</lastName>
-      </author>
+      <releaseDate>
+        <year>2016</year>
+        <month>08</month>
+        <day>09</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A8" type="Guide">
       <title>Jak powstrzymać Paździocha</title>
       <price>22.99</price>
       <pages>222</pages>
-      <releaseDate>2016-08-09T00:00:00</releaseDate>
-      <type>Guide</type>
-      <author>
-        <firstName>Ferdynad</firstName>
-        <lastName>Kiepski</lastName>
-      </author>
+      <releaseDate>
+        <year>2008</year>
+        <month>10</month>
+        <day>13</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A8" type="Guide">
       <title>Jak zrobić, żaby sie nie chciało kiedy się chce</title>
       <price>22.99</price>
       <pages>222</pages>
-      <releaseDate>2016-08-09T00:00:00</releaseDate>
-      <type>Guide</type>
-      <author>
-        <firstName>Ferdynad</firstName>
-        <lastName>Kiepski</lastName>
-      </author>
+      <releaseDate>
+        <year>2001</year>
+        <month>07</month>
+        <day>23</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A9" type="Criminal">
       <title>Sekrekt fioletowego paznokcia</title>
       <price>22.99</price>
       <pages>222</pages>
-      <releaseDate>2016-08-09T00:00:00</releaseDate>
-      <type>Criminal</type>
-      <author>
-        <firstName>Olaf</firstName>
-        <lastName>Ridgerd</lastName>
-      </author>
+      <releaseDate>
+        <year>2001</year>
+        <month>05</month>
+        <day>18</day>
+      </releaseDate>
     </Book>
-    <Book>
+    <Book author="A10" type="Children">
       <title>Ślimakowi się nie śpieszy</title>
       <price>22.99</price>
       <pages>222</pages>
-      <releaseDate>2016-08-09T00:00:00</releaseDate>
-      <type>Children</type>
-      <author>
-        <firstName>Anna</firstName>
-        <lastName>Kobyłka</lastName>
-      </author>
+      <releaseDate>
+        <year>2018</year>
+        <month>01</month>
+        <day>01</day>
+      </releaseDate>
     </Book>
   </books>
 </BookShopMagazine>
