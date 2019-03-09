@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE BookShopMagazine SYSTEM "BookShop.dtd">
 <BookShopMagazine>
+  <informations>
+    <xmlAuthor>Dominika Szeliga 210333</xmlAuthor>
+    <xmlAuthor>Grzegorz Woźnicki 210353</xmlAuthor>
+    <description>Strona zawiera listę książek do kupienia.</description>
+  </informations>
   <authors>
     <Author id="A1">
       <firstName>Jan</firstName>
@@ -197,3 +202,4 @@
     </Book>
   </books>
 </BookShopMagazine>
+

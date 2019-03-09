@@ -1,4 +1,6 @@
-<!ELEMENT BookShopMagazine (authors, books)>
+<!ELEMENT BookShopMagazine (informations, authors, books)>
+<!ELEMENT informations (xmlAuthor+, description)>
+<!ELEMENT xmlAuthor (#PCDATA)>
 <!ELEMENT authors (Author+)>
 <!ELEMENT Author (firstName, lastName)>
 <!ATTLIST Author id ID #REQUIRED>
