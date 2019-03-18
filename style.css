@@ -15,8 +15,42 @@ Book {
   box-shadow: 0 4px 6px rgba(0,0,0,0.12), 0 4px 6px rgba(0,0,0,0.20);
 }
 
-authors {
-  display: none;
+Author {
+  display: block;
+  position: relative;
+  background: #ffffff;
+  margin: 10px;
+  width: 300px;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.12), 0 4px 6px rgba(0,0,0,0.20);
+}
+
+Author > firstName, lastName {
+  font-weight: bold;
+}
+
+Author::before {
+  display: block;
+  content: url(icons/baseline-account_circle-64px.svg);
+  margin-top: 5px;
+}
+
+Author::after {
+  display: block;
+  position: absolute;
+  content: "#" attr(id);
+  top: 5px;
+  right: 5px;
+  color: rgba(0,0,0,.5);
+}
+
+Author:hover::after {
+  color: black;
+}
+
+authors::after {
+  margin-top: 10px;
+  border-bottom: 5px solid red;
 }
 
 informations {
@@ -34,7 +68,7 @@ informations > * {
   list-style-position: inside;
 }
 
-books {
+books, authors {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
