@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="Bookshelf.cs" />
     <Compile Include="BookShopMagazine.cs" />
     <Compile Include="BookType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

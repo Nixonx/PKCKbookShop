@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BookShopMagazine" nillable="true" type="BookShopMagazine" />
+  <xs:complexType name="BookShopMagazine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="authors" type="ArrayOfAuthor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bookshelf" type="ArrayOfBookshelf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAuthor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Author" nillable="true" type="Author" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Author">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="firstName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="lastName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfBookshelf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bookshelf" nillable="true" type="Bookshelf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Bookshelf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="number" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="books" type="ArrayOfBook" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Book" nillable="true" type="Book" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Book">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="title" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="price" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pages" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="releaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="type" type="BookType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="authorID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BookType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Novel" />
+      <xs:enumeration value="Poetry" />
+      <xs:enumeration value="Horror" />
+      <xs:enumeration value="Fantasy" />
+      <xs:enumeration value="Criminal" />
+      <xs:enumeration value="Science" />
+      <xs:enumeration value="Guide" />
+      <xs:enumeration value="Children" />
+      <xs:enumeration value="History" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

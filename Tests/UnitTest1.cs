@@ -13,16 +13,16 @@ namespace Tests
         {
             BookShopMagazine bookShop = new BookShopMagazine();
 
-            Author author1 = new Author("Jan","Kowalski");
-            Author author2 = new Author("Tomasz", "Sienkiewicz");
-            Author author3 = new Author("Olga", "Makłowicz");
-            Author author4 = new Author("Maria", "Wierzchołek");
-            Author author5 = new Author("Joe", "Smith");
-            Author author6 = new Author("Jessica", "Corn");
-            Author author7 = new Author("Charles", "Fredrih");
-            Author author8 = new Author("Ferdynad", "Kiepski");
-            Author author9 = new Author("Olaf", "Ridgerd");
-            Author author10 = new Author("Anna", "Kobyłka");
+            Author author1 = new Author("Jan","Kowalski", "A1");
+            Author author2 = new Author("Tomasz", "Sienkiewicz", "A2");
+            Author author3 = new Author("Olga", "Makłowicz", "A3");
+            Author author4 = new Author("Maria", "Wierzchołek", "A4");
+            Author author5 = new Author("Joe", "Smith", "A5");
+            Author author6 = new Author("Jessica", "Corn", "A6");
+            Author author7 = new Author("Charles", "Fredrih", "A7");
+            Author author8 = new Author("Ferdynad", "Kiepski", "A8");
+            Author author9 = new Author("Olaf", "Ridgerd", "A9");
+            Author author10 = new Author("Anna", "Kobyłka", "A10");
 
             bookShop.authors.Add(author1);
             bookShop.authors.Add(author2);
@@ -53,23 +53,30 @@ namespace Tests
             Book book14 = new Book("Sekrekt fioletowego paznokcia", 22.99, 222, new DateTime(2016, 8, 9), BookType.Criminal, author9);
             Book book15 = new Book("Ślimakowi się nie śpieszy", 22.99, 222, new DateTime(2016, 8, 9), BookType.Children, author10);
 
-            bookShop.books.Add(book1);
-            bookShop.books.Add(book2);
-            bookShop.books.Add(book3);
-            bookShop.books.Add(book4);
-            bookShop.books.Add(book5);
-            bookShop.books.Add(book6);
-            bookShop.books.Add(book7);
-            bookShop.books.Add(book8);
-            bookShop.books.Add(book9);
-            bookShop.books.Add(book10);
-            bookShop.books.Add(book11);
-            bookShop.books.Add(book12);
-            bookShop.books.Add(book13);
-            bookShop.books.Add(book14);
-            bookShop.books.Add(book15);
+            Bookshelf bookshelf1 = new Bookshelf("B1");
+            Bookshelf bookshelf2 = new Bookshelf("B2");
+            Bookshelf bookshelf3 = new Bookshelf("B3");
+            bookshelf1.books.Add(book1);
+            bookshelf1.books.Add(book2);
+            bookshelf1.books.Add(book3);
+            bookshelf2.books.Add(book4);
+            bookshelf2.books.Add(book5);
+            bookshelf2.books.Add(book6);
+            bookshelf2.books.Add(book7);
+            bookshelf2.books.Add(book8);
+            bookshelf2.books.Add(book9);
+            bookshelf3.books.Add(book10);
+            bookshelf3.books.Add(book11);
+            bookshelf3.books.Add(book12);
+            bookshelf3.books.Add(book13);
+            bookshelf3.books.Add(book14);
+            bookshelf3.books.Add(book15);
 
-         //   XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop1.xml");
+            bookShop.bookshelf.Add(bookshelf1);
+            bookShop.bookshelf.Add(bookshelf2);
+            bookShop.bookshelf.Add(bookshelf3);
+            XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop1.xml");
+            XMLutils.ExtractSchema(OutputFilesPath()+"\\bookShop.xsd", bookShop);
         }
         private string OutputFilesPath()
         {

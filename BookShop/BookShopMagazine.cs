@@ -9,10 +9,10 @@ namespace BookShop
     public class BookShopMagazine
     {
         public List<Author> authors { get; set; }
-        public List<Book> books { get; set; }
+        public List<Bookshelf> bookshelf { get; set; }
         public BookShopMagazine()
         {
-            books = new List<Book>();
+            bookshelf = new List<Bookshelf>();
             authors = new List<Author>();
         }
     }

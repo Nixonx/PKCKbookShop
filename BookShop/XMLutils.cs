@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 using System.Xml.Serialization;
 
 namespace BookShop
@@ -39,6 +40,27 @@ namespace BookShop
             finally
             {
                 textReader.Close();
+            }
+        }
+        public static void ExtractSchema<T>(string path, T schemaGenerateForObject)
+        {
+            //SoapReflectionImporter soapReflectionImporter = new SoapReflectionImporter();
+            //XmlTypeMapping xmlTypeMapping = soapReflectionImporter.ImportTypeMapping(typeof(T));
+            //XmlSchemas xmlSchemas = new XmlSchemas();
+            //XmlSchema xmlSchema = new XmlSchema();
+            //xmlSchemas.Add(xmlSchema);
+            //StreamWriter writer = new StreamWriter(path);
+            //xmlSchema.Write(writer);
+            //XmlSchemaExporter xmlSchemaExporter = new XmlSchemaExporter(xmlSchemas);
+            //xmlSchemaExporter.ExportTypeMapping(xmlTypeMapping);
+            XmlSchemas schemas = new XmlSchemas();
+            XmlSchemaExporter exporter = new XmlSchemaExporter(schemas);
+            XmlTypeMapping mapping = new XmlReflectionImporter().ImportTypeMapping(typeof(T));
+            exporter.ExportTypeMapping(mapping);
+            StreamWriter schemaWriter = new StreamWriter(path);
+            foreach (XmlSchema schema in schemas)
+            {
+                schema.Write(schemaWriter);
             }
         }
     }

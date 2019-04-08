@@ -10,13 +10,15 @@ namespace BookShop
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
+        public string id { get; set; }
 
         #region constructors
         public Author() { }
-        public Author(string firstName, string lastName)
+        public Author(string firstName, string lastName, string id)
         {
             this.firstName = firstName;
             this.lastName = lastName;
+            this.id = id;
         }
         #endregion
     }
