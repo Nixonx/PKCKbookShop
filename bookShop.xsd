@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="BookShopMagazine" nillable="true" type="BookShopMagazine" />
+  <xs:element name="BookShopMagazine" nillable="true" type="BookShopMagazine">
+
+<xs:key name="keyAuthorId"  >  
+    <xs:selector xpath=".//Author" />  
+    <xs:field xpath="@authorId" />  
+  </xs:key>  
+  
+  <xs:keyref name="keyAuthorIdRef" refer="keyAuthorId">  
+    <xs:selector xpath=".//Book" />  
+    <xs:field xpath="@authorIdRef" />  
+  </xs:keyref>  
+
+</xs:element>
   <xs:complexType name="BookShopMagazine">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="authors" type="ArrayOfAuthor" />
@@ -9,15 +21,18 @@
   </xs:complexType>
   <xs:complexType name="ArrayOfAuthor">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Author" nillable="true" type="Author" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Author" nillable="true" type="Author">
+</xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Author">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="firstName" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="lastName" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Link" type="xs:anyURI" />
     </xs:sequence>
+	<xs:attributeGroup ref="AuthorAttributes"/>
+
   </xs:complexType>
   <xs:complexType name="ArrayOfBookshelf">
     <xs:sequence>
@@ -26,7 +41,7 @@
   </xs:complexType>
   <xs:complexType name="Bookshelf">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="number" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="number" type="Bookshelfnumber" />
       <xs:element minOccurs="0" maxOccurs="1" name="books" type="ArrayOfBook" />
     </xs:sequence>
   </xs:complexType>
@@ -45,6 +60,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="authorID" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
     </xs:sequence>
+	<xs:attribute name="authorIdRef" type="AuthorID" use="required"/> 
   </xs:complexType>
   <xs:simpleType name="BookType">
     <xs:restriction base="xs:string">
@@ -59,4 +75,18 @@
       <xs:enumeration value="History" />
     </xs:restriction>
   </xs:simpleType>
+	<xs:simpleType name="Bookshelfnumber">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]"/>
+        </xs:restriction>
+  </xs:simpleType>
+	<xs:simpleType name="AuthorID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]*"/>
+        </xs:restriction>
+  </xs:simpleType>
+<xs:attributeGroup name="AuthorAttributes">
+	<xs:attribute name="authorId" type="AuthorID" use="required"/> 
+  	<xs:attribute name="wiek" type="xs:int" use="required"/>
+	</xs:attributeGroup>
 </xs:schema>

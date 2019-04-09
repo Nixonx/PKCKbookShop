@@ -35,16 +35,19 @@ Author::before {
   margin-top: 5px;
 }
 
-Author::after {
+Author > id {
   display: block;
   position: absolute;
-  content: "#" attr(id);
   top: 5px;
   right: 5px;
   color: rgba(0,0,0,.5);
 }
 
-Author:hover::after {
+Author > id::before {
+  content: "#";
+}
+
+Author > id:hover {
   color: black;
 }
 
@@ -89,6 +92,26 @@ Book > *::before {
 Book > title {
   font-size: 25pt;
   font-family: "Century Gothic"
+}
+
+Book > type::before {
+  content: 'type: ';
+}
+
+Bookshelf > number {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+}
+
+Bookshelf > number::before {
+  content: 'Bookshelf ID: ';
+}
+
+Book > authorID {
+  display: none;
 }
 
 Book > title::first-letter {
