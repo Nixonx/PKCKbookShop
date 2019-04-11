@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema  elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsbook="book" >
+  <xs:import schemaLocation="book.xsd"
+               namespace="book" />
   <xs:group name="PersonalData">
     <xs:sequence>
     <xs:element minOccurs="0" maxOccurs="1" name="firstName" type="xs:string" />
@@ -62,25 +64,13 @@
       <xs:element minOccurs="1" maxOccurs="1" name="price" type="xs:double" />
       <xs:element minOccurs="1" maxOccurs="1" name="pages" type="xs:int" />
       <xs:element minOccurs="1" maxOccurs="1" name="releaseDate" type="xs:dateTime" />
-      <xs:element minOccurs="1" maxOccurs="1" name="type" type="BookType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="type" type="xsbook:BookType" />
       <xs:element minOccurs="0" maxOccurs="1" name="authorID" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
     </xs:sequence>
     <xs:attribute name="authorIdRef" type="AuthorID" use="required"/>
   </xs:complexType>
-  <xs:simpleType name="BookType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Novel" />
-      <xs:enumeration value="Poetry" />
-      <xs:enumeration value="Horror" />
-      <xs:enumeration value="Fantasy" />
-      <xs:enumeration value="Criminal" />
-      <xs:enumeration value="Science" />
-      <xs:enumeration value="Guide" />
-      <xs:enumeration value="Children" />
-      <xs:enumeration value="History" />
-    </xs:restriction>
-  </xs:simpleType>
+  
   <xs:simpleType name="Bookshelfnumber">
     <xs:restriction base="xs:string">
       <xs:pattern value="[A-Z][0-9]"/>
