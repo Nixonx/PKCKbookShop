@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css" ?>
+<!DOCTYPE BookShopMagazine SYSTEM "BookShop.dtd">
+<BookShopMagazine>
+  <informations>
+    <xmlAuthor>Dominika Szeliga 210333</xmlAuthor>
+    <xmlAuthor>Grzegorz Woźnicki 210353</xmlAuthor>
+    <description>Strona zawiera listę książek do kupienia.</description>
+  </informations>
+  <authors>
+    <Author id="A1">
+      <firstName>Jan</firstName>
+      <lastName>Kowalski</lastName>
+    </Author>
+    <Author id="A2">
+      <firstName>Tomasz</firstName>
+      <lastName>Sienkiewicz</lastName>
+    </Author>
+    <Author id="A3">
+      <firstName>Olga</firstName>
+      <lastName>Makłowicz</lastName>
+    </Author>
+    <Author id="A4">
+      <firstName>Maria</firstName>
+      <lastName>Wierzchołek</lastName>
+    </Author>
+    <Author id="A5">
+      <firstName>Joe</firstName>
+      <lastName>Smith</lastName>
+    </Author>
+    <Author id="A6">
+      <firstName>Jessica</firstName>
+      <lastName>Corn</lastName>
+    </Author>
+    <Author id="A7">
+      <firstName>Charles</firstName>
+      <lastName>Fredrih</lastName>
+    </Author>
+    <Author id="A8">
+      <firstName>Ferdynad</firstName>
+      <lastName>Kiepski</lastName>
+    </Author>
+    <Author id="A9">
+      <firstName>Olaf</firstName>
+      <lastName>Ridgerd</lastName>
+    </Author>
+    <Author id="A10">
+      <firstName>Anna</firstName>
+      <lastName>Kobyłka</lastName>
+    </Author>
+  </authors>
+  <books>
+    <Book author="A1" type="Guide">
+      <title>Jak powstrzymać niedźwiedzia</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2016</year>
+        <month>08</month>
+        <day>03</day>
+      </releaseDate>
+    </Book>
+    <Book author="A2" type="Children">
+      <title>Sposobów kilka wróbla ćwirka</title>
+      <price>10.5</price>
+      <pages>87</pages>
+      <releaseDate>
+        <year>2017</year>
+        <month>08</month>
+        <day>19</day>
+      </releaseDate>
+      <description>Zażuć gęślą jaźń - to zdanie zawiera wszystkie polskie znaki</description>
+    </Book>
+    <Book author="A3" type="Horror">
+      <title>Słuszna porcja kiełbasy</title>
+      <price>40.5</price>
+      <pages>305</pages>
+      <releaseDate>
+        <year>2012</year>
+        <month>05</month>
+        <day>01</day>
+      </releaseDate>
+    </Book>
+    <Book author="A3" type="Fantasy">
+      <title>Smacznie, zdrowo i szczupło</title>
+      <price>45.99</price>
+      <pages>288</pages>
+      <releaseDate>
+        <year>2015</year>
+        <month>05</month>
+        <day>01</day>
+      </releaseDate>
+    </Book>
+    <Book author="A4" type="Novel">
+      <title>W kręgu bieli</title>
+      <price>45.96</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2011</year>
+        <month>08</month>
+        <day>03</day>
+      </releaseDate>
+    </Book>
+    <Book author="A4" type="Novel">
+      <title>W kręgu czerni</title>
+      <price>42.97</price>
+      <pages>223</pages>
+      <releaseDate>
+        <year>2010</year>
+        <month>09</month>
+        <day>10</day>
+      </releaseDate>
+    </Book>
+    <Book author="A4" type="Novel">
+      <title>W kręgu zieleni</title>
+      <price>40.98</price>
+      <pages>224</pages>
+      <releaseDate>
+        <year>2018</year>
+        <month>11</month>
+        <day>20</day>
+      </releaseDate>
+    </Book>
+    <Book author="A5" type="Poetry">
+      <title>Muzyka skrzypiącej podłogi</title>
+      <price>36.99</price>
+      <pages>104</pages>
+      <releaseDate>
+        <year>2005</year>
+        <month>11</month>
+        <day>03</day>
+      </releaseDate>
+    </Book>
+    <Book author="A6" type="Criminal">
+      <title>Milczenie kukurydzy</title>
+      <price>50</price>
+      <pages>500</pages>
+      <releaseDate>
+        <year>2013</year>
+        <month>03</month>
+        <day>03</day>
+      </releaseDate>
+    </Book>
+    <Book author="A7" type="Science">
+      <title>Atomy kryptonitu</title>
+      <price>62.79</price>
+      <pages>432</pages>
+      <releaseDate>
+        <year>2012</year>
+        <month>12</month>
+        <day>30</day>
+      </releaseDate>
+    </Book>
+    <Book author="A8" type="History">
+      <title>Moje życie z Halinką</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2016</year>
+        <month>08</month>
+        <day>09</day>
+      </releaseDate>
+    </Book>
+    <Book author="A8" type="Guide">
+      <title>Jak powstrzymać Paździocha</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2008</year>
+        <month>10</month>
+        <day>13</day>
+      </releaseDate>
+    </Book>
+    <Book author="A8" type="Guide">
+      <title>Jak zrobić, żaby sie nie chciało kiedy się chce</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2001</year>
+        <month>07</month>
+        <day>23</day>
+      </releaseDate>
+    </Book>
+    <Book author="A9" type="Criminal">
+      <title>Sekrekt fioletowego paznokcia</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2001</year>
+        <month>05</month>
+        <day>18</day>
+      </releaseDate>
+    </Book>
+    <Book author="A10" type="Children">
+      <title>Ślimakowi się nie śpieszy</title>
+      <price>22.99</price>
+      <pages>222</pages>
+      <releaseDate>
+        <year>2018</year>
+        <month>01</month>
+        <day>01</day>
+      </releaseDate>
+    </Book>
+  </books>
+</BookShopMagazine>

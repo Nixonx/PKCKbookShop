@@ -1,5 +1,8 @@
 ﻿using System;
 using System.IO;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Schema;
 using BookShop;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -75,13 +78,59 @@ namespace Tests
             bookShop.bookshelf.Add(bookshelf1);
             bookShop.bookshelf.Add(bookshelf2);
             bookShop.bookshelf.Add(bookshelf3);
-            XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop1.xml");
-            XMLutils.ExtractSchema(OutputFilesPath()+"\\bookShop.xsd", bookShop);
+            XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop2.xml");
+            XMLutils.ExtractSchema(OutputFilesPath()+"\\bookShop2.xsd", bookShop);
         }
-        private string OutputFilesPath()
+
+
+        [TestMethod]
+        public static void Validate()
+        {
+
+            // Set the validation settings.
+            XmlReaderSettings settings = new XmlReaderSettings();
+            settings.ValidationType = ValidationType.Schema;
+            settings.ValidationFlags |= XmlSchemaValidationFlags.ProcessInlineSchema;
+            settings.ValidationFlags |= XmlSchemaValidationFlags.ProcessSchemaLocation;
+            settings.ValidationFlags |= XmlSchemaValidationFlags.ReportValidationWarnings;
+            settings.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);
+
+            // Create the XmlReader object.
+            XmlReader reader = XmlReader.Create(OutputFilesPath() + "\\bookShop.xsd", settings);
+
+            // Parse the file. 
+            while (reader.Read()) ;
+
+            XmlDocument asset = new XmlDocument();
+
+
+        }
+        // Display any warnings or errors.
+        private static void ValidationCallBack(object sender, ValidationEventArgs args)
+        {
+            if (args.Severity == XmlSeverityType.Warning)
+                Console.WriteLine("\tWarning: Matching schema not found.  No validation occurred." + args.Message);
+            else
+                Console.WriteLine("\tValidation error: " + args.Message);
+
+        }
+        private static string OutputFilesPath()
         {
             string testDir = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             return Directory.GetParent(testDir).FullName;
+        }
+        [TestMethod]
+        public void ValidateSimp()
+        {
+            XmlSchemaSet schemas = new XmlSchemaSet();
+            schemas.Add("BookShopNamespace", OutputFilesPath() + "\\bookShop.xsd");
+
+            XDocument doc = XDocument.Load(OutputFilesPath()+ "\\bookShop.xsd");
+            string msg = "";
+            doc.Validate(schemas, (o, e) => {
+                msg += e.Message + Environment.NewLine;
+            });
+            Console.WriteLine(msg == "" ? "Document is valid" : "Document invalid: " + msg);
         }
     }
 }
