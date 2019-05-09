@@ -1,4 +1,6 @@
-﻿<Raport>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="BookShopXHTMLTransform.xslt"?>
+<Raport>
   <RaportGenerateData>2019-05-09T11:45:52.872Z</RaportGenerateData>
   <Authors>10</Authors>
   <Books>15</Books>
