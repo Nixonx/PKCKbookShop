@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="BookShopTransform.xslt"?>
-<BookShopMagazine xsi:schemaLocation="https://www.w3schools.com bookShop.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:google="http://google.com/">
+<BookShopMagazineElem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com bookShop.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:google="http://google.com/" >
   <authors>
     <Author authorId="A1" wiek="31">
       <firstName>Jan</firstName>
@@ -168,4 +168,4 @@
       </books>
     </Bookshelf>
   </bookshelf>
-</BookShopMagazine>
+</BookShopMagazineElem>
