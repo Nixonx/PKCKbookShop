@@ -27,9 +27,37 @@ namespace Presentation.ViewModel
             AddBokshelfeWindow win = new AddBokshelfeWindow();
             win.Show();
         }
-        public static void Show(MainWindowVM sender)
+
+        public static void AddAuthor(AuthorVM sender)
         {
-            sender.selectedBook = sender.BooksList[3];
+            Author newAuthor = new Author(sender.firstName, sender.lastName, sender.id);
+            sender.magazine.shopMagazine.authors.Add(newAuthor);
+            sender.ActualizeAuthorsList();
+        }
+        public static void SaveChangesAuthor(AuthorVM sender)
+        {           
+            Author newAuthor = new Author(sender.firstName, sender.lastName, sender.id);
+            sender.magazine.shopMagazine.authors.Remove(sender.selectedAuthor);
+            sender.magazine.shopMagazine.authors.Add(newAuthor);
+            sender.ActualizeAuthorsList();
+        }
+        public static void DeleteAuthor(AuthorVM sender)
+        {
+            sender.magazine.shopMagazine.authors.Remove(sender.selectedAuthor);
+            sender.ActualizeAuthorsList();
+        }
+        public static void AddBook(BookVM sender)
+        {
+
+        }
+        public static void AddBookshelf(BookshelfVM sender)
+        {
+
+        }
+
+        public static void Refresh(MainWindowVM sender)
+        {
+            sender.ActualizeBooksList();
         }
         public static void GetLoadPath(MainWindowVM sender)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 namespace Presentation
-{
+{ 
     /// <summary>
     /// Logika interakcji dla klasy App.xaml
     /// </summary>

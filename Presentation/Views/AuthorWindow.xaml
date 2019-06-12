@@ -1,0 +1,31 @@
+﻿<Window x:Class="Presentation.AddAuthorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation"
+        mc:Ignorable="d"
+        Title="AddAuthorWindow" Height="352.123" Width="409.909">
+    <Grid>
+        <Button Content="Add as new" Command="{Binding add}" HorizontalAlignment="Left" Margin="235,235,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListView ItemsSource="{Binding Path=authorsList, Mode=TwoWay}" SelectedItem="{Binding Path=selectedAuthor, Mode=TwoWay}" HorizontalAlignment="Left" Height="252" Margin="10,44,0,0" VerticalAlignment="Top" Width="163">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="First name" Width="75" DisplayMemberBinding="{Binding firstName}"/>
+                    <GridViewColumn Header="Last Name" Width="75"  DisplayMemberBinding="{Binding lastName}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Authors:" FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="Save changes" Command="{Binding saveChanges}" HorizontalAlignment="Left" Margin="287,196,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Delete" Command="{Binding delete}" HorizontalAlignment="Left" Margin="186,196,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="257,92,0,0" TextWrapping="Wrap" Text="{Binding firstName}" VerticalAlignment="Top" Width="120" BorderThickness="1"/>
+        <Label Content="Name: " HorizontalAlignment="Left" Margin="186,89,0,0" VerticalAlignment="Top"/>
+        <Label Content="Surname: " HorizontalAlignment="Left" Margin="186,120,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="257,123,0,0" TextWrapping="Wrap" Text="{Binding lastName}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ID: " HorizontalAlignment="Left" Margin="186,151,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="257,155,0,0" TextWrapping="Wrap" Text="{Binding id}" VerticalAlignment="Top" Width="120" Background="{Binding idColor}"/>
+
+
+    </Grid>
+</Window>

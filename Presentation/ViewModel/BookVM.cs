@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation.ViewModel
 {
-    public class AddAuthorVM : MainWindowVM
+    public class BookVM : MainWindowVM
     {
     }
 }

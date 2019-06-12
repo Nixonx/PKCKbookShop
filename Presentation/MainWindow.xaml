@@ -10,7 +10,7 @@
     <Grid Background="Beige">
         <Button Content="Save" Command="{Binding Save}" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
         <Button Content="Load" Command="{Binding Load}" HorizontalAlignment="Right" Margin="0,49,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
-        <Button Content="Show" Command="{Binding Show}" HorizontalAlignment="Right" Margin="0,348,10,0" VerticalAlignment="Top" Width="78" Height="38"/>
+        <Button Content="Refresh" Command="{Binding Refresh}" HorizontalAlignment="Right" Margin="0,348,10,0" VerticalAlignment="Top" Width="78" Height="38"/>
         <ListView HorizontalAlignment="Left" Height="337" Margin="10,49,0,0" VerticalAlignment="Top" Width="322" ItemsSource="{Binding Path=BooksList, Mode=TwoWay}" SelectedItem="{Binding selectedBook, Mode=TwoWay}">
             <ListView.View>
                 <GridView>
@@ -20,8 +20,11 @@
             </ListView.View>
         </ListView>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Books list:" VerticalAlignment="Top" FontSize="25"/>
-        <Button Content="Add Author" Command="{Binding AddAuthor}" HorizontalAlignment="Right" Margin="0,88,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
-        <Button Content="Add Book" Command="{Binding AddBook}" HorizontalAlignment="Right" Margin="0,127,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+        <Label Content="Manage" FontSize="18" HorizontalAlignment="Right" Margin="0,111,23,0" VerticalAlignment="Top" RenderTransformOrigin="-0.18,-0.026"/>
+        <Button Content="Author" Command="{Binding ManageAuthor}" HorizontalAlignment="Right" Margin="0,144,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+        <Button Content="Book" Command="{Binding ManageBook}" HorizontalAlignment="Right" Margin="0,183,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+        <Button Content="Bookshelf" Command="{Binding ManageBookshelf}" HorizontalAlignment="Right" Margin="0,227,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+
         <TextBlock HorizontalAlignment="Left" Margin="359,83,0,0" TextWrapping="Wrap" Text="Book" VerticalAlignment="Top" FontSize="25" />
 
         <TextBlock Text="Title:" HorizontalAlignment="Left" Margin="359,135,50,0" VerticalAlignment="Top"/>
@@ -39,7 +42,7 @@
 
         <TextBlock Text="Type:" HorizontalAlignment="Left" Margin="359,264,50,0" VerticalAlignment="Top"/>
         <TextBlock Text="{Binding Path=selectedBook.type}" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="450,264,110,0" VerticalAlignment="Top"/>
-        
+
         <TextBlock Text="Descryption:" HorizontalAlignment="Left" Margin="359,300,50,0" VerticalAlignment="Top"/>
         <TextBlock Text="{Binding Path=selectedBook.description}" HorizontalAlignment="Left" Margin="450,300,110,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
 

@@ -17,9 +17,11 @@ namespace Presentation.ViewModel
     {
         public ICommand Load { get; set; }
         public ICommand Save { get; set; }
-        public ICommand Show { get; set; }
-        public ICommand AddAuthor { get; set; }
-        public ICommand AddBook { get; set; }
+        public ICommand Refresh { get; set; }
+        public ICommand ManageAuthor { get; set; }
+        public ICommand ManageBook { get; set; }
+        public ICommand ManageBookshelf { get; set; }
+        public ObservableCollection<Book> BooksList { get; set; }
 
 
         public BookShopMagazineHolder magazine;
@@ -30,9 +32,9 @@ namespace Presentation.ViewModel
             magazine = BookShopMagazineHolder.Instance;
             Load = new RelayCommand(o => Cmd.GetLoadPath(this));
             Save = new RelayCommand(o => Cmd.GetSavePath(this));
-            Show = new RelayCommand(o => Cmd.Show(this));
-            AddAuthor = new RelayCommand(o => Cmd.OpenAddAuthorWindow());
-            AddBook = new RelayCommand(o => Cmd.OpenAddBookWindow());
+            Refresh = new RelayCommand(o => Cmd.Refresh(this));
+            ManageAuthor = new RelayCommand(o => Cmd.OpenAddAuthorWindow());
+            ManageBook = new RelayCommand(o => Cmd.OpenAddBookWindow());
             BooksList = new ObservableCollection<Book>();
         }
 
@@ -47,13 +49,6 @@ namespace Presentation.ViewModel
                 }
             }
             selectedBook = BooksList[0];
-        }
-        private ObservableCollection<Book> _booksList;
-        public ObservableCollection<Book> BooksList {
-            get { return _booksList; }
-            set { _booksList = value;
-                OnPropertyChanged("booksList");
-            }
         }
         private Book _selectedBook;
         public Book selectedBook
