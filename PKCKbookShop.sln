@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		BookShop.dtd = BookShop.dtd
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{B87E4C5E-1E32-4811-B379-9A11659781C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{BD68B038-31CA-4F9C-87F8-8A3ECD776E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD68B038-31CA-4F9C-87F8-8A3ECD776E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD68B038-31CA-4F9C-87F8-8A3ECD776E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87E4C5E-1E32-4811-B379-9A11659781C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87E4C5E-1E32-4811-B379-9A11659781C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87E4C5E-1E32-4811-B379-9A11659781C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87E4C5E-1E32-4811-B379-9A11659781C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

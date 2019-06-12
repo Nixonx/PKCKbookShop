@@ -27,20 +27,26 @@ namespace BookShop
             }
         }
 
-        public static void Deserialize<T>(string path, ref T targetObject)
+        public static BookShopMagazine Deserialize(string path)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            BookShopMagazine targetObject = new BookShopMagazine();
+            XmlSerializer serializer = new XmlSerializer(typeof(BookShopMagazine));
 
             TextReader textReader = null;
             try
             {
                 textReader = new StreamReader(path);
-                targetObject = (T)serializer.Deserialize(textReader);
+                targetObject = (BookShopMagazine)serializer.Deserialize(textReader);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("EXEPTION");
             }
             finally
             {
                 textReader.Close();
             }
+            return targetObject;
         }
         public static void ExtractSchema<T>(string path, T schemaGenerateForObject)
         {
