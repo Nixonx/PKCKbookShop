@@ -51,8 +51,6 @@ namespace Presentation.ViewModel
                     BooksList.Add(b);
                 }
             }
-            if(BooksList.Count >0)
-            selectedBook = BooksList[0];
         }
         private Book _selectedBook;
         public Book selectedBook

@@ -28,7 +28,7 @@ namespace Presentation.ViewModel
             {
                 try
                 {
-                    bookshelf.books.Remove(sender.selectedBook);
+                    bookshelf.books.Remove(sender.selectedBBook);
                 }
                 catch (Exception e) { };
             }
@@ -37,7 +37,14 @@ namespace Presentation.ViewModel
         }
         public static void DeleteBook(BookVM sender)
         {
-            sender.magazine.shopMagazine.bookshelf[sender.selectedBookshelfId].books.Remove(sender.selectedBook);
+            foreach (Bookshelf bookshelf in sender.magazine.shopMagazine.bookshelf)
+            {
+                try
+                {
+                    bookshelf.books.Remove(sender.selectedBBook);
+                }
+                catch (Exception e) { };
+            }
             sender.ActualizeBooksList();
         }
         #endregion
@@ -139,7 +146,14 @@ namespace Presentation.ViewModel
             transform.Transform(xmlFilePath, resultFOPath);
                         
             FonetDriver driver = FonetDriver.Make();
+            try
+            {
             driver.Render(resultFOPath, resultFilePath);
+            } catch (Exception e)
+            {
+                MessageBox.Show("Sorry Error: " + e.Message);
+            }
+
         }
         #endregion
     }
