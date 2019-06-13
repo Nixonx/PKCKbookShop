@@ -1,7 +1,9 @@
 ﻿using BookShop;
 using Fonet;
 using Microsoft.Win32;
+using System;
 using System.IO;
+using System.Windows;
 using System.Xml.Xsl;
 
 namespace Presentation.ViewModel
@@ -16,13 +18,27 @@ namespace Presentation.ViewModel
         }
         public static void AddBook(BookVM sender)
         {
-
+            sender.magazine.shopMagazine.bookshelf[sender.selectedBookshelfId].books.Add(sender.CreateBookFromParameters());
+            sender.ActualizeBooksList();
         }
         public static void SaveChangesBook(BookVM sender)
         {
+            Book newBook = sender.CreateBookFromParameters();
+            foreach (Bookshelf bookshelf in sender.magazine.shopMagazine.bookshelf)
+            {
+                try
+                {
+                    bookshelf.books.Remove(sender.selectedBook);
+                }
+                catch (Exception e) { };
+            }
+            sender.magazine.shopMagazine.bookshelf[sender.selectedBookshelfId].books.Add(newBook);
+            sender.ActualizeBooksList();
         }
         public static void DeleteBook(BookVM sender)
         {
+            sender.magazine.shopMagazine.bookshelf[sender.selectedBookshelfId].books.Remove(sender.selectedBook);
+            sender.ActualizeBooksList();
         }
         #endregion
         #region AuthorCommands

@@ -18,4 +18,24 @@ namespace BookShop
         Children,
         History
     }
+    public static class BookTypeUtils
+    {
+        public static List<string> getEnumsList()
+        {
+            List<string> result = new List<string>
+            {
+        "Novel",
+        "Poetry",
+        "Horror",
+        "Fantasy",
+        "Criminal",
+        "Science",
+        "Guide",
+        "Children",
+        "History"
+            };
+            return result;
+        }
+    }
+
 }

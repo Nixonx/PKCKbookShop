@@ -5,35 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="AddBookWindow" Height="394.5" Width="441.5">
+        Title="AddBookWindow" Height="394.5" Width="539">
     <Grid>
         <Label Content="Books: " FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <ListView HorizontalAlignment="Left" Height="272" Margin="10,49,0,0" VerticalAlignment="Top" Width="194">
+        <ListView ItemsSource="{Binding Path=BooksList, Mode=TwoWay}" SelectedItem="{Binding Path=selectedBBook, Mode=TwoWay}" HorizontalAlignment="Left" Height="272" Margin="10,49,0,0" VerticalAlignment="Top" Width="194">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Title" Width="200" DisplayMemberBinding="{Binding title}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Content="Title: " HorizontalAlignment="Left" Margin="209,49,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="268,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="268,52,0,0" TextWrapping="Wrap" Text="{Binding Path=Btitle, Mode=TwoWay}" VerticalAlignment="Top" Width="253"/>
         <Label Content="Price" HorizontalAlignment="Left" Margin="209,80,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="268,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="268,80,0,0" TextWrapping="Wrap" Text="{Binding Bprice}" VerticalAlignment="Top" Width="253"/>
         <Label Content="Pages: " HorizontalAlignment="Left" Margin="209,112,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="268,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Release date:" HorizontalAlignment="Left" Margin="209,143,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="220,169,0,0" TextWrapping="Wrap" Text="DD" VerticalAlignment="Top" Width="25"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="247,169,0,0" TextWrapping="Wrap" Text="MM" VerticalAlignment="Top" Width="25"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="275,169,0,0" TextWrapping="Wrap" Text="YYYY" VerticalAlignment="Top" Width="50"/>
-        <Label Content="Book type: " HorizontalAlignment="Left" Margin="209,197,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="283,201,0,0" VerticalAlignment="Top" Width="105"/>
-        <Label Content="Author:" HorizontalAlignment="Left" Margin="209,228,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="268,232,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="278,263,0,0" VerticalAlignment="Top" Width="110"/>
-        <Label Content="Bookshelf:" HorizontalAlignment="Left" Margin="209,259,0,0" VerticalAlignment="Top"/>
-        <Button Content="Save chaneges" HorizontalAlignment="Left" Margin="220,306,0,0" VerticalAlignment="Top" Width="88"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="329,306,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Add as new" HorizontalAlignment="Left" Margin="283,331,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="268,115,0,0" TextWrapping="Wrap" Text="{Binding Bpages}" VerticalAlignment="Top" Width="253"/>
+        <Label Content="Release date:" HorizontalAlignment="Left" Margin="210,147,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="312,151,0,0" TextWrapping="Wrap" Text="{Binding Path=day, Mode=TwoWay}" VerticalAlignment="Top" Width="30"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="344,151,0,0" TextWrapping="Wrap" Text="{Binding Path=month, Mode=TwoWay}" VerticalAlignment="Top" Width="30"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="376,151,0,0" TextWrapping="Wrap" Text="{Binding Path=year, Mode=TwoWay}" VerticalAlignment="Top" Width="50"/>
+        <Label Content="Book type: " HorizontalAlignment="Left" Margin="209,184,0,0" VerticalAlignment="Top"/>
+        <ComboBox SelectedIndex="{Binding Path=selectedBookTypeId, Mode=TwoWay}" ItemsSource="{Binding bookTypes}" HorizontalAlignment="Left" Margin="283,188,0,0" VerticalAlignment="Top" Width="238"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="209,214,0,0" VerticalAlignment="Top"/>
+        <ComboBox SelectedIndex="{Binding Path=selectedAuthorId, Mode=TwoWay}" ItemsSource="{Binding authorsNames}" HorizontalAlignment="Left" Margin="284,218,0,0" VerticalAlignment="Top" Width="237"/>
+        <ComboBox SelectedIndex="{Binding Path=selectedBookshelfId, Mode=TwoWay}" ItemsSource="{Binding bookshelfesNames}" HorizontalAlignment="Left" Margin="284,250,0,0" VerticalAlignment="Top" Width="237"/>
+        <Label Content="Bookshelf:" HorizontalAlignment="Left" Margin="209,246,0,0" VerticalAlignment="Top"/>
+        <Button Content="Save chaneges" Command="{Binding saveChanges}" HorizontalAlignment="Left" Margin="220,306,0,0" VerticalAlignment="Top" Width="88"/>
+        <Button Content="Delete" Command="{Binding delete}" HorizontalAlignment="Left" Margin="329,306,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Add as new" Command="{Binding add}" HorizontalAlignment="Left" Margin="428,306,0,0" VerticalAlignment="Top" Width="76"/>
 
     </Grid>
 </Window>

@@ -37,7 +37,10 @@ namespace Presentation.ViewModel
         {
             get { return _selectedBookshelve; }
             set { _selectedBookshelve = value;
+                if (value != null)
+                {
                 bookshelfeName = value.number;
+                }
                 OnPropertyChanged("selectedBookshelfe");
             }
         }

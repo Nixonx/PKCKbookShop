@@ -51,6 +51,7 @@ namespace Presentation.ViewModel
                     BooksList.Add(b);
                 }
             }
+            if(BooksList.Count >0)
             selectedBook = BooksList[0];
         }
         private Book _selectedBook;
@@ -60,7 +61,10 @@ namespace Presentation.ViewModel
             set
             {
                 _selectedBook = value;
-                authorFullName = value.author.ToSting();
+                if(value != null)
+                {
+                    authorFullName = value.author.ToSting();
+                }               
                 OnPropertyChanged("selectedBook");
             }
         }
