@@ -24,7 +24,7 @@
         <Label Content="Surname: " HorizontalAlignment="Left" Margin="186,120,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="257,123,0,0" TextWrapping="Wrap" Text="{Binding lastName}" VerticalAlignment="Top" Width="120"/>
         <Label Content="ID: " HorizontalAlignment="Left" Margin="186,151,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="257,155,0,0" TextWrapping="Wrap" Text="{Binding id}" VerticalAlignment="Top" Width="120" Background="{Binding idColor}"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="257,155,0,0" TextWrapping="Wrap" Text="{Binding id}" VerticalAlignment="Top" Width="120"/>
 
 
     </Grid>

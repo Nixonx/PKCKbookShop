@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
@@ -26,8 +27,17 @@ namespace BookShop
                     writer.Close();
             }
         }
-
-        public static BookShopMagazine Deserialize(string path)
+        public static void SerializeWithXSLT<T> (T dataToSerialize, string path)
+        {
+        XmlSerializer s = new XmlSerializer(typeof(T));
+            using (XmlWriter writer = XmlWriter.Create(path))
+            {
+             //   <? xml - stylesheet type = "text/xsl" href = "BookShopPDFTransform.xslt" ?>
+                  writer.WriteProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"BookShopPDFTransform.xsl\"");
+                s.Serialize(writer, dataToSerialize);
+            }
+        }
+    public static BookShopMagazine Deserialize(string path)
         {
             BookShopMagazine targetObject = new BookShopMagazine();
             XmlSerializer serializer = new XmlSerializer(typeof(BookShopMagazine));

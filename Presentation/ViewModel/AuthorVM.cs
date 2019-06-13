@@ -12,7 +12,6 @@ namespace Presentation.ViewModel
 {
     public class AuthorVM : MainWindowVM
     {
-        public BookShopMagazineHolder magazine;
         public ICommand add { get; set; }
         public ICommand saveChanges { get; set; }
         public ICommand delete { get; set; }
@@ -25,6 +24,7 @@ namespace Presentation.ViewModel
             delete = new RelayCommand(o => Cmd.DeleteAuthor(this));
             ActualizeAuthorsList();
         }
+        #region properties
         private Author _selectedAuthor;
         public Author selectedAuthor
         {
@@ -91,9 +91,12 @@ namespace Presentation.ViewModel
                 OnPropertyChanged("authorsList");
             }
         }
+        #endregion
         public void ActualizeAuthorsList()
         {
-            authorsList = new List<Author>(magazine.shopMagazine.authors);
+            try { authorsList = new List<Author>(magazine.shopMagazine.authors); }
+            catch(NullReferenceException e)
+            { }
         }
     }
 }

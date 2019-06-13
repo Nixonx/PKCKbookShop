@@ -20,10 +20,10 @@
             </ListView.View>
         </ListView>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Books list:" VerticalAlignment="Top" FontSize="25"/>
-        <Label Content="Manage" FontSize="18" HorizontalAlignment="Right" Margin="0,111,23,0" VerticalAlignment="Top" RenderTransformOrigin="-0.18,-0.026"/>
-        <Button Content="Author" Command="{Binding ManageAuthor}" HorizontalAlignment="Right" Margin="0,144,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
-        <Button Content="Book" Command="{Binding ManageBook}" HorizontalAlignment="Right" Margin="0,183,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
-        <Button Content="Bookshelf" Command="{Binding ManageBookshelf}" HorizontalAlignment="Right" Margin="0,227,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+        <Label Content="Manage" FontSize="18" HorizontalAlignment="Right" Margin="0,162,23,0" VerticalAlignment="Top" RenderTransformOrigin="-0.18,-0.026"/>
+        <Button Content="Author" Command="{Binding ManageAuthor}" HorizontalAlignment="Right" Margin="0,195,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+        <Button Content="Book" Command="{Binding ManageBook}" HorizontalAlignment="Right" Margin="0,234,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
+        <Button Content="Bookshelf" Command="{Binding ManageBookshelf}" HorizontalAlignment="Right" Margin="0,278,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="359,83,0,0" TextWrapping="Wrap" Text="Book" VerticalAlignment="Top" FontSize="25" />
 
@@ -45,6 +45,7 @@
 
         <TextBlock Text="Descryption:" HorizontalAlignment="Left" Margin="359,300,50,0" VerticalAlignment="Top"/>
         <TextBlock Text="{Binding Path=selectedBook.description}" HorizontalAlignment="Left" Margin="450,300,110,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Generate pdf" Command="{Binding generatePdf}" HorizontalAlignment="Right" Margin="0,88,10,0" VerticalAlignment="Top" Width="102" Height="34"/>
 
     </Grid>
 </Window>

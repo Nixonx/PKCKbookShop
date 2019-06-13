@@ -21,6 +21,7 @@ namespace Presentation.ViewModel
         public ICommand ManageAuthor { get; set; }
         public ICommand ManageBook { get; set; }
         public ICommand ManageBookshelf { get; set; }
+        public ICommand generatePdf { get; set; }
         public ObservableCollection<Book> BooksList { get; set; }
 
 
@@ -33,8 +34,10 @@ namespace Presentation.ViewModel
             Load = new RelayCommand(o => Cmd.GetLoadPath(this));
             Save = new RelayCommand(o => Cmd.GetSavePath(this));
             Refresh = new RelayCommand(o => Cmd.Refresh(this));
-            ManageAuthor = new RelayCommand(o => Cmd.OpenAddAuthorWindow());
-            ManageBook = new RelayCommand(o => Cmd.OpenAddBookWindow());
+            generatePdf = new RelayCommand(o => Cmd.generatePdf(this));
+            ManageAuthor = new RelayCommand(o => Cmd.OpenAuthorWindow());
+            ManageBook = new RelayCommand(o => Cmd.OpenBookWindow());
+            ManageBookshelf = new RelayCommand(o => Cmd.OpenBookshelfWindow());
             BooksList = new ObservableCollection<Book>();
         }
 
@@ -57,7 +60,7 @@ namespace Presentation.ViewModel
             set
             {
                 _selectedBook = value;
-                authorFullName = value.author.firstName + " " + value.author.lastName;
+                authorFullName = value.author.ToSting();
                 OnPropertyChanged("selectedBook");
             }
         }

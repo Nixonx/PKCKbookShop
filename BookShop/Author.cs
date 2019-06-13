@@ -21,5 +21,9 @@ namespace BookShop
             this.id = id;
         }
         #endregion
+        public string ToSting()
+        {
+            return firstName + " " + lastName;
+        }
     }
 }

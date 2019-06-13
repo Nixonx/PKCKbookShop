@@ -81,14 +81,6 @@ namespace Tests
             XMLutils.Serialize(bookShop, OutputFilesPath()+"\\BookShop2.xml");
             XMLutils.ExtractSchema(OutputFilesPath()+"\\bookShop2.xsd", bookShop);
         }
-        [TestMethod]
-        public static void Cout()
-        {
-            int x = 1;
-            Console.WriteLine(x++);
-            Console.WriteLine(++x);
-        }
-
 
         [TestMethod]
         public static void Validate()
