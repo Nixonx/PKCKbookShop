@@ -33,6 +33,18 @@
             <id>A22</id>
           </author>
         </Book>
+        <Book>
+          <title>Book2</title>
+          <price>10</price>
+          <pages>10</pages>
+          <releaseDate>2010-10-10T00:00:00</releaseDate>
+          <type>Novel</type>
+          <author>
+            <firstName>Antoni</firstName>
+            <lastName>Jankiel</lastName>
+            <id>A22</id>
+          </author>
+        </Book>
       </books>
     </Bookshelf>
     <Bookshelf>

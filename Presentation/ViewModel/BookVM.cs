@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Presentation.ViewModel
@@ -183,10 +184,17 @@ namespace Presentation.ViewModel
         }
         public Book CreateBookFromParameters()
         {
+            try
+            {
             DateTime date = new DateTime(year, month, day);
             Author author = magazine.shopMagazine.authors[selectedAuthorId];
             Book result = new Book(Btitle, Bprice, Bpages, date, (BookType)selectedBookTypeId, author);
             return result;
+            } catch (Exception e)
+            {
+                MessageBox.Show("Input data incorrect");
+            }
+            return null;
         }
     }
 }

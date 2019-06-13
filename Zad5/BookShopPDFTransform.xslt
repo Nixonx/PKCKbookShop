@@ -15,7 +15,7 @@
 			Authors:
 		</fo:block>
                 <fo:table>
-                  <xsl:for-each select="//Book">
+                  <xsl:for-each select="//Author">
                      <fo:table-column column-width="30mm" />
                   </xsl:for-each>
                   <fo:table-header>
@@ -72,7 +72,7 @@
                         <fo:table-cell border="1px solid black">
                            <fo:block font-weight="bold" font-size="14px">releaseData</fo:block>
                         </fo:table-cell>
- <fo:table-cell border="1px solid black">
+                        <fo:table-cell border="1px solid black">
                            <fo:block font-weight="bold" font-size="14px">author</fo:block>
                         </fo:table-cell>
                      </fo:table-row>
